@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculo de PTU</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    
+  <h2>Simulador de las utilidades sapos</h2>
+<h3> con la nueva ley </h3>  
+<p>VIII. El monto de la participación de utilidades tendrá como límite máximo tres meses del salario del trabajador o el promedio de la participación recibida en los últimos tres años; se aplicará el monto que resulte más favorable al trabajador.</p>
+
+<p>
+  <label>Total de año ganado </label>
+  <input id="PTU" type="number" placeholder="total de año ganado" oninput="convertirPtu(this.value)" onchange="convertirPtu(this.value)">
+</p>
+<p>Utilidad: <span id="outputCelcius"></span></p>
+
+<span>ALerta de spoiler!!!!!</span>
+<script>
+function convertirPtu(total) {
+  total = parseFloat(total);
+  document.getElementById("outputCelcius").innerHTML=(total/360)*90 + "  FALTA DESCONTAR EL IMPUESTO!!!";
+}
+</script>
+</body>
+</html>
